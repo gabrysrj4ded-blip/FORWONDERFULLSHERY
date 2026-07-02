@@ -172,7 +172,7 @@ body{
 
     margin:0 auto 25px;
 
-    clip-path:path("M90 165 C20 120 0 70 45 35 C70 15 90 35 90 50 C90 35 110 15 135 35 C180 70 160 120 90 165");
+    border-radius:50%;
 
     border:5px solid rgba(255,255,255,.45);
 
