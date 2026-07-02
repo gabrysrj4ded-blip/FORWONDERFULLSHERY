@@ -1,0 +1,550 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:url("assets/images/bg1.jpg") center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#fff;
+    -webkit-tap-highlight-color:transparent;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.background{
+    position:fixed;
+    inset:0;
+    background:rgba(255,192,220,.18);
+    backdrop-filter:blur(3px);
+    z-index:-2;
+}
+
+.petals{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:-1;
+}
+
+/* =========================
+   SCREENS
+========================= */
+
+.screen{
+    position:absolute;
+    width:100%;
+    height:100%;
+    display:none;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.screen.active{
+    display:flex;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card{
+
+    width:min(92vw,430px);
+
+    background:rgba(255,255,255,.28);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.4);
+
+    border-radius:28px;
+
+    padding:30px 22px;
+
+    text-align:center;
+
+    box-shadow:0 15px 40px rgba(255,80,150,.25);
+
+}
+
+/* =========================
+   BOW
+========================= */
+
+.bow{
+
+    width:120px;
+
+    margin-bottom:20px;
+
+    animation:float 3s ease-in-out infinite;
+
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.title{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:46px;
+
+    color:white;
+
+}
+
+.title span{
+
+    color:#ff4d97;
+
+}
+
+.subtitle{
+
+    margin:15px 0 28px;
+
+    color:white;
+
+    line-height:1.7;
+
+}
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress{
+
+    width:100%;
+
+    height:14px;
+
+    background:rgba(255,255,255,.25);
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+}
+
+#progress{
+
+    width:0;
+
+    height:100%;
+
+    background:linear-gradient(90deg,#ff7eb6,#ff3c88);
+
+    border-radius:30px;
+
+}
+
+/* =========================
+   STORY
+========================= */
+
+#heartPhoto{
+
+    width:180px;
+
+    height:180px;
+
+    margin:0 auto 25px;
+
+    clip-path:path("M90 165 C20 120 0 70 45 35 C70 15 90 35 90 50 C90 35 110 15 135 35 C180 70 160 120 90 165");
+
+    border:5px solid rgba(255,255,255,.45);
+
+    overflow:hidden;
+
+    animation:pulse 1.8s infinite;
+
+    box-shadow:0 0 35px rgba(255,105,180,.45);
+
+}
+
+#heartPhoto img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+#typing{
+
+    min-height:90px;
+
+    color:white;
+
+    line-height:1.8;
+
+    font-size:20px;
+
+    margin-bottom:25px;
+
+}
+
+#continueBtn{
+
+    border:none;
+
+    background:#ff4f98;
+
+    color:white;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#continueBtn:hover{
+
+    transform:scale(1.06);
+
+}
+
+
+
+/* =========================
+   QUESTION
+========================= */
+
+#question h1{
+
+    color:white;
+
+    font-size:34px;
+
+    line-height:1.5;
+
+    margin-bottom:40px;
+
+}
+
+.buttons{
+
+    position:relative;
+
+    width:100%;
+
+    height:170px;
+
+}
+
+.buttons button{
+
+    position:absolute;
+
+    border:none;
+
+    border-radius:50px;
+
+    padding:15px 32px;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+}
+
+#yesBtn{
+
+    left:10%;
+
+    bottom:20px;
+
+    background:#ff4f98;
+
+    color:white;
+
+}
+
+#noBtn{
+
+    right:10%;
+
+    bottom:20px;
+
+    background:white;
+
+    color:#ff4f98;
+
+}
+
+#funnyText{
+
+    margin-top:20px;
+
+    min-height:25px;
+
+    color:white;
+
+}
+
+
+
+/* =========================
+   FINAL
+========================= */
+
+#final{
+
+    background:url("assets/images/final-bg.jpg") center/cover no-repeat;
+
+}
+
+.finalTitle{
+
+    font-family:'Dancing Script',cursive;
+
+    font-size:50px;
+
+    margin-bottom:20px;
+
+}
+
+.bigHeart{
+
+    font-size:90px;
+
+    margin:30px 0;
+
+    animation:pulse 1.3s infinite;
+
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .card{
+
+        width:94vw;
+
+        padding:25px 18px;
+
+    }
+
+    .title{
+
+        font-size:40px;
+
+    }
+
+    #question h1{
+
+        font-size:28px;
+
+    }
+
+    #heartPhoto{
+
+        width:150px;
+
+        height:150px;
+
+    }
+
+    .buttons button{
+
+        font-size:16px;
+
+        padding:13px 25px;
+
+    }
+
+    .bigHeart{
+
+        font-size:70px;
+
+    }
+
+}
+
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes float{
+
+    0%{transform:translateY(0);}
+    50%{transform:translateY(-12px);}
+    100%{transform:translateY(0);}
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.08);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+/* =========================
+   HEART EXPLOSION
+========================= */
+
+.heartParticle{
+
+    position:fixed;
+
+    left:50%;
+    top:50%;
+
+    pointer-events:none;
+
+    z-index:9999;
+
+    transform:translate(-50%,-50%);
+
+    animation:heartExplosion linear forwards;
+
+}
+
+@keyframes heartExplosion{
+
+    0%{
+
+        transform:
+        translate(-50%,-50%)
+        translate(0,0)
+        scale(.2)
+        rotate(0deg);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+        translate(-50%,-50%)
+        translate(var(--x),var(--y))
+        scale(1.4)
+        rotate(720deg);
+
+        opacity:0;
+
+    }
+
+}
+
+/* =========================
+   PETALS
+========================= */
+
+.petal{
+
+    position:fixed;
+
+    top:-60px;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+    animation:petalFall linear forwards;
+
+}
+
+@keyframes petalFall{
+
+    0%{
+
+        transform:
+        translateY(-80px)
+        translateX(0)
+        rotate(0deg);
+
+        opacity:0;
+
+    }
+
+    10%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+        translateY(120vh)
+        translateX(var(--moveX))
+        rotate(720deg);
+
+        opacity:0;
+
+    }
+
+}
+
+.iceHeart{
+
+    width:130px;
+
+    height:auto;
+
+    margin:15px auto;
+
+    display:block;
+
+    animation:pulse 2s infinite;
+
+    filter:drop-shadow(0 0 18px rgba(255,120,190,.5));
+
+}
