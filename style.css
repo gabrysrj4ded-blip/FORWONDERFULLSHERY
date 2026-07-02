@@ -544,3 +544,11 @@ body{
     filter:drop-shadow(0 0 18px rgba(255,120,190,.5));
 
 }
+
+@media (max-width:600px){
+
+    body{
+        background:url("assets/images/bg-mobile.jpg") center center/cover no-repeat;
+    }
+
+}
